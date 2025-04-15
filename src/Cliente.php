@@ -19,12 +19,12 @@ class Cliente
         return "idoso";
     }
 
-    public function setNome(string $nome): void 
+    private function setNome(string $nome): void 
     {
         $this->nome = $nome;
     }
 
-    public function setIdade(int $idade): void 
+    private function setIdade(int $idade): void 
     {
         if($idade < 0){
             throw new InvalidArgumentException("Idade não pode ser negativa");
@@ -33,7 +33,7 @@ class Cliente
         $this->idade = $idade;
     }
 
-    public function setEmail(string $email): void 
+    private function setEmail(string $email): void 
     {
         if( !filter_var($email, FILTER_VALIDATE_EMAIL) ){
             throw new InvalidArgumentException("E-mail inválido!");
