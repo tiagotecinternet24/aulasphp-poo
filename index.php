@@ -13,7 +13,7 @@
 require_once "src/Cliente.php"; // Superclasse
 require_once "src/PessoaFisica.php"; // Subclasse
 
-$clientePF = new PessoaFisica("Tiago", "tiago@gmail.com");
+$clientePF = new PessoaFisica("Tiago", "tiago@gmail.com", 30, "123.456.789-00");
 ?>
 
 <pre><?=var_dump($clientePF)?></pre>
