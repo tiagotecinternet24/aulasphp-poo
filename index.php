@@ -35,8 +35,12 @@ definir/usar uma subclasse que extenda PessoaJuridica (que é uma classe final) 
     <h3>PF</h3>
     <?=$clientePF->relatorio()?>
     
+    <!-- Acessamos as opções do Enum através do getSituacao()->name -->
+    <p><b>Situação:</b> <?=$clientePF->getSituacao()->name?> </p>
+    
     <h3>PJ</h3>
     <?=$clientePJ->relatorio()?>
+    <p><b>Situação:</b> <?=$clientePJ->getSituacao()->name?> </p>
 
 
 </body>
