@@ -10,6 +10,12 @@
     <hr>
 
 <?php
+/* Sempre que trabalharmos com namespaces, será necessário
+especificar através do 'use' quais classes/enums/funções serão
+usadadas. */
+use MeuProjeto\Models\PessoaFisica;
+use MeuProjeto\Models\PessoaJuridica;
+
 require_once "src/Enums/Situacao.php"; // Enum
 require_once "src/Models/Cliente.php"; // Superclasse
 require_once "src/Models/PessoaFisica.php"; // Subclasse
@@ -18,6 +24,7 @@ require_once "src/Models/PessoaJuridica.php"; // Subclasse
 $clientePF = new PessoaFisica("Tiago", "tiago@gmail.com", 30, "123.456.789-00");
 $clientePJ = new PessoaJuridica(
     "João Pedro", "joao@tabajara.com", "32.789.5555/000-1", 2019, "Corporação Tabajara");
+
 
     
 ?>
