@@ -1,5 +1,6 @@
 <?php
 namespace MeuProjeto\Models;
+use InvalidArgumentException;
 
 final class PessoaFisica extends Cliente
 {
