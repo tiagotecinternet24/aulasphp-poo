@@ -1,14 +1,18 @@
 <?php
-/* Classe abstrata: não pode ser instanciada.
-Com isso, será possível criar objetos apenas a partir das subclasses. */
+namespace MeuProjeto\Models;
+
+// Usamos o 'use' para indicar a utilização de outras classes/enums que temos
+use MeuProjeto\Enums\Situacao;
+
+// Usamos o 'use' também para indicar a utilização de classes internas do PHP
+use InvalidArgumentException;
+
 abstract class Cliente
 {
     private string $nome;
     private string $email;
     private Situacao $situacao;
 
-    /* Definindo a situação INATIVO como valor padrão 
-    para o parâmetro situacao no construtor. */
     public function __construct(
         string $nome, string $email, Situacao $situacao = Situacao::INATIVO
         )
